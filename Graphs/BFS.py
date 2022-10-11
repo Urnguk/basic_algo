@@ -1,13 +1,13 @@
 def BFS(adjacency_list, start_node=0, visited_set=None):
     if visited_set is None:
         visited_set = {start_node}
-    LIFO = [start_node]
-    while LIFO:
-        current_node = LIFO.pop()
+    FIFO = [start_node]
+    while FIFO:
+        current_node = FIFO.pop(0)
         for next_node in adjacency_list[current_node]:
             if next_node not in visited_set:
                 visited_set.add(next_node)
-                LIFO.append(next_node)
+                FIFO.append(next_node)
     return visited_set
 
 

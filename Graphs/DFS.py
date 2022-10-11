@@ -1,4 +1,4 @@
-def DFS(adjacency_list, visited_set=None, current_node=0):
+def DFS(adjacency_list, current_node=0, visited_set=None):
     if visited_set is None:
         visited_set = set()
     visited_set.add(current_node)
